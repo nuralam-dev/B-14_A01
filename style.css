@@ -115,20 +115,131 @@ nav a {
   color: #64748b;
   font-size: 1rem;
 }
-.secure_section{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 10%;
+.secure_section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 10%;
 }
-.secure_title{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 10px;
+.secure_title {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 20px;
+  margin: 50px 0;
 }
-.secure_cards{
-    
+.secure_cards {
+  display: flex;
+  justify-content: center;
+  padding: 30px 10px;
+  gap: 20px;
 }
-
-
+.secure_content,
+.secure_content_2 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(232, 230, 230);
+  border-radius: 16px;
+  padding: 20px;
+  width: 380px;
+  /* for hover */
+  transition:
+    transform 0.3s ease-out,
+    box-shadow 0.3s ease-out,
+    border-color 0.3s ease-out;
+}
+.secure_content p,
+.secure_content_2 p {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #64748b;
+  margin: 12px 0;
+}
+.secure_content h1,
+.secure_content_2 h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #0d1b2a;
+  margin-left: 8px;
+}
+.secure_content ul,
+.secure_content_2 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+}
+.secure_content ul li,
+.secure_content_2 ul li {
+  font-size: 1rem;
+  color: #333333;
+  padding: 5px;
+  position: relative;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+.secure_content ul li::before {
+  content: ".";
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+.secure_content button,
+.secure_content_2 button {
+  width: 100%;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+  border-radius: 14px;
+  padding: 14px;
+  background-color: transparent;
+  margin-top: auto;
+}
+.secure_content_2 {
+  background-color: #0f172a;
+}
+.secure_content_2 ul li {
+  color: #cbd5e1;
+}
+.secure_content_2 ul li::before {
+  content: ".";
+  color: #60a5fa;
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+.secure_content_2 p {
+  color: #93c5fd;
+}
+.secure_content_2 h1 {
+  color: white;
+}
+.secure_content_2 button {
+  background-color: #2563eb;
+  color: white;
+}
+.secure_content .contact_btn {
+  border: 1px solid #0d1b2a;
+  color: #0d1b2a;
+}
+.secure_content:hover,
+.secure_content_2:hover {
+  transform: translateY(-12px);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.secure_content button:hover{
+    background-color: #2563eb;
+    color: #ffffff;
+    transform: scale(1.02);
+}
+.secure_content_2 button:hover{
+    background-color: #1d4ed8;
+    transform: scale(1.02);
+}
