@@ -290,3 +290,184 @@ footer {
   display: flex;
   gap: 10px;
 }
+/* প্রি-ফুটার মেইন সেকশন wrapper */
+.pre_footer_section {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 80px 0; /* ওপরে নিচে সুন্দর স্পেসিফিকেশন */
+
+  border-bottom: 1px solid #1e293b;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* পুরো সেকশনটিকে স্ক্রিনের মাঝখানে আনবে */
+}
+
+/* 🚀 মেইন কন্টেইনার (পাশাপাশি এবং মাঝখানে রাখার ম্যাজিক) */
+.pre_footer_container {
+  max-width: 1200px; /* স্ট্যান্ডার্ড উইডথ */
+  width: 90%; /* ছোট স্ক্রিনে দুই পাশে মার্জিন রাখার জন্য */
+  margin: 0 auto; /* কন্টেইনারটিকে সেন্টারে লক করবে */
+  display: flex;
+  justify-content: space-between; /* দুটো কলামকে সমান দূরত্বে দুপাশে ছড়াবে */
+  align-items: flex-start; /* ওপরে সমান লাইনে রাখবে */
+  gap: 50px; /* মাঝখানের ফাঁকা জায়গা */
+}
+
+/* দুই পাশের কলাম যেন সমান জায়গা পায় */
+.faq_column,
+.newsletter_column {
+  flex: 1;
+  width: 50%;
+}
+
+/* হেডিং ও সাবটাইটেল */
+.pre_footer_title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.pre_footer_subtitle {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+
+/* FAQ বক্স স্টাইল */
+.faq_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq_box {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq_box:hover {
+  border-color: #2563eb;
+}
+
+.faq_question {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.faq_question i {
+  color: #64748b;
+}
+
+.faq_answer {
+  padding: 0 20px 20px 20px;
+  border-top: 1px solid #334155;
+  background-color: #1a2333;
+}
+
+.faq_answer p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 12px 0 0 0;
+}
+
+/* নিউজলেটার কার্ড স্টাইল */
+.newsletter_card {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid #334155;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.newsletter_icon {
+  width: 55px;
+  height: 55px;
+  background-color: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  margin: 0 auto 20px auto;
+}
+
+.newsletter_card h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.newsletter_card p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* ফর্ম ও ইনপুট */
+.newsletter_form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input_group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.mail_inside_icon {
+  position: absolute;
+  left: 16px;
+  color: #64748b;
+}
+
+.newsletter_form input {
+  width: 100%;
+  padding: 16px 16px 16px 44px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background-color: #0f172a;
+  color: white;
+  font-size: 1rem;
+}
+
+.newsletter_form input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* বাটন */
+.newsletter_form button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.newsletter_form button:hover {
+  background-color: #1d4ed8;
+}
+
+.spam_text {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
