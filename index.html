@@ -163,95 +163,58 @@
         </div>
       </section>
       <!-- AI Generate -->
-      <section class="pre_footer_section">
-        <div class="pre_footer_container">
-          <!-- বাম পাশে: FAQ সেকশন -->
-          <div class="faq_column">
-            <h2 class="pre_footer_title">Frequently Asked Questions</h2>
-            <p class="pre_footer_subtitle">
-              Have questions about DevConf 2026? Find quick answers below.
-            </p>
+     <section class="pre-footer-container">
+        <div class="pre-footer-grid">
+            
+            <div class="faq-column">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                
+                <div class="accordion">
+                    <details class="accordion-item" open>
+                        <summary class="accordion-header">
+                            <span>When and where is the conference taking place?</span>
+                            <span class="icon"></span>
+                        </summary>
+                        <div class="accordion-content">
+                            <p>The conference will be held from October 14-16, 2026, at the Tech Innovation Center in downtown San Francisco, as well as streamed live online for virtual ticket holders.</p>
+                        </div>
+                    </details>
 
-            <div class="faq_wrapper">
-              <!-- FAQ Item 1 -->
-              <div class="faq_box">
-                <div class="faq_question">
-                  <span>When and where will the event take place?</span>
-                  <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq_answer">
-                  <p>
-                    DevConf 2026 will be a hybrid event held from August 15-17,
-                    2026. You can attend physically at the Grand Convention
-                    Center or join virtually.
-                  </p>
-                </div>
-              </div>
+                    <details class="accordion-item">
+                        <summary class="accordion-header">
+                            <span>Will the sessions be recorded for later viewing?</span>
+                            <span class="icon"></span>
+                        </summary>
+                        <div class="accordion-content">
+                            <p>Yes! All keynotes and breakout sessions will be recorded and made available to all registered attendees within 24 hours of the live broadcast.</p>
+                        </div>
+                    </details>
 
-              <!-- FAQ Item 2 -->
-              <div class="faq_box">
-                <div class="faq_question">
-                  <span>Will the sessions be recorded?</span>
-                  <i class="fas fa-chevron-down"></i>
+                    <details class="accordion-item">
+                        <summary class="accordion-header">
+                            <span>Are there student discounts available?</span>
+                            <span class="icon"></span>
+                        </summary>
+                        <div class="accordion-content">
+                            <p>Absolutely. We offer a 50% discount for verified students. You can apply for a student discount code via our registration page by uploading your student ID.</p>
+                        </div>
+                    </details>
                 </div>
-                <div class="faq_answer">
-                  <p>
-                    Yes! All registered attendees will get exclusive access to
-                    full session recordings and speaker slides for 1 year after
-                    the event.
-                  </p>
-                </div>
-              </div>
-
-              <!-- FAQ Item 3 -->
-              <div class="faq_box">
-                <div class="faq_question">
-                  <span>Can I get a refund if my plans change?</span>
-                  <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq_answer">
-                  <p>
-                    We offer full refunds up to 14 days before the event starts.
-                    After that, you can transfer your ticket to a colleague at
-                    any time.
-                  </p>
-                </div>
-              </div>
             </div>
-          </div>
 
-          <!-- ডান পাশে: নিউজলেটার সেকশন -->
-          <div class="newsletter_column">
-            <div class="newsletter_card">
-              <div class="newsletter_icon">
-                <i class="far fa-envelope-open"></i>
-              </div>
-              <h2>Stay in the Loop</h2>
-              <p>
-                Subscribe to our newsletter to receive early-bird ticket
-                discounts, speaker announcements, and exclusive event updates.
-              </p>
-
-              <form class="newsletter_form" onsubmit="event.preventDefault()">
-                <div class="input_group">
-                  <i class="far fa-envelope mail_inside_icon"></i>
-                  <input
-                    type="email"
-                    placeholder="Enter your business email"
-                    required
-                  />
+            <div class="newsletter-column">
+                <div class="newsletter-card">
+                    <h3>Stay in the Loop</h3>
+                    <p>Subscribe to our newsletter for exclusive speaker announcements, schedule updates, and early-bird ticket alerts.</p>
+                    <form class="newsletter-form" action="#" method="POST">
+                        <input type="email" placeholder="Enter your email address" required aria-label="Email Address">
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div>
-                <button type="submit">Subscribe Now</button>
-              </form>
-
-              <span class="spam_text"
-                ><i class="fas fa-shield-alt"></i> No spam. Unsubscribe
-                anytime.</span
-              >
             </div>
-          </div>
+
         </div>
-      </section>
+    </section>
     </main>
     <footer>
       <section class="footer_section">

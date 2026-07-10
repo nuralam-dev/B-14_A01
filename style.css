@@ -290,184 +290,213 @@ footer {
   display: flex;
   gap: 10px;
 }
-/* প্রি-ফুটার মেইন সেকশন wrapper */
-.pre_footer_section {
-  background-color: #0f172a;
-  color: #ffffff;
-  padding: 80px 0; /* ওপরে নিচে সুন্দর স্পেসিফিকেশন */
-
-  border-bottom: 1px solid #1e293b;
+/* ai style */
+.pre-footer-container {
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center; /* পুরো সেকশনটিকে স্ক্রিনের মাঝখানে আনবে */
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
-/* 🚀 মেইন কন্টেইনার (পাশাপাশি এবং মাঝখানে রাখার ম্যাজিক) */
-.pre_footer_container {
-  max-width: 1200px; /* স্ট্যান্ডার্ড উইডথ */
-  width: 90%; /* ছোট স্ক্রিনে দুই পাশে মার্জিন রাখার জন্য */
-  margin: 0 auto; /* কন্টেইনারটিকে সেন্টারে লক করবে */
-  display: flex;
-  justify-content: space-between; /* দুটো কলামকে সমান দূরত্বে দুপাশে ছড়াবে */
-  align-items: flex-start; /* ওপরে সমান লাইনে রাখবে */
-  gap: 50px; /* মাঝখানের ফাঁকা জায়গা */
+.pre-footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center; /* Vertically centers both columns side-by-side */
 }
 
-/* দুই পাশের কলাম যেন সমান জায়গা পায় */
-.faq_column,
-.newsletter_column {
-  flex: 1;
-  width: 50%;
-}
-
-/* হেডিং ও সাবটাইটেল */
-.pre_footer_title {
+/* Left Column: FAQ Accordion Styles */
+.section-title {
   font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.pre_footer_subtitle {
-  color: #94a3b8;
-  font-size: 0.95rem;
-  margin-bottom: 30px;
-}
-
-/* FAQ বক্স স্টাইল */
-.faq_wrapper {
+.accordion {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
 
-.faq_box {
-  background-color: #1e293b;
-  border: 1px solid #334155;
-  border-radius: 12px;
+.accordion-item {
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.5rem;
   overflow: hidden;
-  transition: all 0.3s ease;
 }
 
-.faq_box:hover {
-  border-color: #2563eb;
+/* Hide native summary marker/arrow */
+.accordion-header::-webkit-details-marker,
+.accordion-header::marker {
+  display: none;
 }
 
-.faq_question {
-  padding: 20px;
+.accordion-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
+  color: #e2e8f0;
+  font-size: 1.1rem;
   font-weight: 600;
+  padding: 1rem 0;
+  cursor: pointer;
+  list-style: none; /* Hides default triangle arrow in Firefox */
+  transition: color 0.2s ease;
 }
 
-.faq_question i {
-  color: #64748b;
+.accordion-header:hover {
+  color: #38bdf8;
 }
 
-.faq_answer {
-  padding: 0 20px 20px 20px;
-  border-top: 1px solid #334155;
-  background-color: #1a2333;
+/* Custom pure CSS plus/minus icon toggle */
+.accordion-header .icon {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
 }
 
-.faq_answer p {
+.accordion-header .icon::before,
+.accordion-header .icon::after {
+  content: "";
+  position: absolute;
+  background-color: currentColor;
+  transition: transform 0.25s ease-out;
+}
+
+/* Horizontal line */
+.accordion-header .icon::before {
+  top: 6px;
+  left: 0;
+  width: 14px;
+  height: 2px;
+}
+
+/* Vertical line */
+.accordion-header .icon::after {
+  top: 0;
+  left: 6px;
+  width: 2px;
+  height: 14px;
+}
+
+/* CSS state change when <details> is open */
+.accordion-item[open] .accordion-header {
+  color: #38bdf8;
+}
+
+/* Rotates out the vertical line to form a minus (-) symbol */
+.accordion-item[open] .accordion-header .icon::after {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.accordion-item[open] .accordion-header .icon::before {
+  transform: rotate(180deg);
+}
+
+/* Accordion Content Styling */
+.accordion-content {
   color: #94a3b8;
-  font-size: 0.95rem;
   line-height: 1.6;
-  margin: 12px 0 0 0;
+  font-size: 0.95rem;
+  padding: 0.5rem 0 1rem 0;
+  /* CSS transition for smooth opening wrapper */
+  animation: slideDown 0.25s ease-out forwards;
 }
 
-/* নিউজলেটার কার্ড স্টাইল */
-.newsletter_card {
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Right Column: Newsletter Card Styles */
+.newsletter-card {
   background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   border: 1px solid #334155;
-  border-radius: 20px;
-  padding: 40px;
-  text-align: center;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
-.newsletter_icon {
-  width: 55px;
-  height: 55px;
-  background-color: rgba(37, 99, 235, 0.1);
-  color: #2563eb;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.3rem;
-  margin: 0 auto 20px auto;
+/* Glow effect behind the card */
+.newsletter-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.15) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
 }
 
-.newsletter_card h2 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 12px;
+.newsletter-card h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #fff;
 }
 
-.newsletter_card p {
+.newsletter-card p {
   color: #94a3b8;
-  font-size: 0.95rem;
   line-height: 1.6;
-  margin-bottom: 24px;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
 }
 
-/* ফর্ম ও ইনপুট */
-.newsletter_form {
+.newsletter-form {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 1rem;
 }
 
-.input_group {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.mail_inside_icon {
-  position: absolute;
-  left: 16px;
-  color: #64748b;
-}
-
-.newsletter_form input {
+.newsletter-form input {
   width: 100%;
-  padding: 16px 16px 16px 44px;
-  border-radius: 10px;
-  border: 1px solid #334155;
-  background-color: #0f172a;
-  color: white;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  background-color: rgba(15, 23, 42, 0.6);
+  color: #fff;
   font-size: 1rem;
+  transition: border-color 0.2s;
 }
 
-.newsletter_form input:focus {
+.newsletter-form input:focus {
   outline: none;
-  border-color: #2563eb;
+  border-color: #6366f1;
 }
 
-/* বাটন */
-.newsletter_form button {
-  background-color: #2563eb;
-  color: white;
+.newsletter-form button {
+  padding: 1rem;
+  border-radius: 8px;
   border: none;
-  padding: 16px;
-  border-radius: 10px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #fff;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition:
+    opacity 0.2s,
+    transform 0.1s;
 }
 
-.newsletter_form button:hover {
-  background-color: #1d4ed8;
+.newsletter-form button:hover {
+  opacity: 0.9;
 }
 
-.spam_text {
-  display: block;
-  margin-top: 15px;
-  font-size: 0.85rem;
-  color: #64748b;
+.newsletter-form button:active {
+  transform: scale(0.98);
 }
