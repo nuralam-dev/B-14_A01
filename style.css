@@ -13,6 +13,7 @@
   border-radius: 5px;
   font-weight: bold;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 .common_btn:hover {
   background-color: #1e40af;
@@ -44,7 +45,6 @@ nav a {
   display: grid;
   justify-content: center;
   align-items: center;
-  /* padding: 40px 20px; */
 }
 .hero_content {
   display: flex;
@@ -71,12 +71,26 @@ nav a {
   margin: 50px 0;
   font-weight: bold;
   font-size: 3rem;
+  padding: 50px 0;
+}
+/* hover */
+.speaker_card:hover {
+  transform: translateY(-12px);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 .speaker_card {
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   overflow: hidden;
+  cursor: pointer;
+  /* for hover */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .speakers_container {
@@ -143,6 +157,7 @@ nav a {
   border-radius: 16px;
   padding: 20px;
   width: 380px;
+  cursor: pointer;
   /* for hover */
   transition:
     transform 0.3s ease-out,
@@ -197,6 +212,7 @@ nav a {
   padding: 14px;
   background-color: transparent;
   margin-top: auto;
+  cursor: pointer;
 }
 .secure_content_2 {
   background-color: #0f172a;
@@ -222,11 +238,14 @@ nav a {
 .secure_content_2 button {
   background-color: #2563eb;
   color: white;
+  cursor: pointer;
 }
 .secure_content .contact_btn {
   border: 1px solid #0d1b2a;
   color: #0d1b2a;
+  cursor: pointer;
 }
+
 .secure_content:hover,
 .secure_content_2:hover {
   transform: translateY(-12px);
@@ -247,7 +266,7 @@ footer {
   background-color: #0d1b2a;
 }
 .footer_section {
-  padding: 20px 2%;
+  padding: 40px 2%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -267,7 +286,7 @@ footer {
 .socal_midea a i {
   color: #ffffff;
 }
-.socal_midea{
-    display: flex;
-    gap: 10px;
+.socal_midea {
+  display: flex;
+  gap: 10px;
 }
