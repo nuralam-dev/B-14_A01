@@ -234,12 +234,40 @@ nav a {
     0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
-.secure_content button:hover{
-    background-color: #2563eb;
-    color: #ffffff;
-    transform: scale(1.02);
+.secure_content button:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+  transform: scale(1.02);
 }
-.secure_content_2 button:hover{
-    background-color: #1d4ed8;
-    transform: scale(1.02);
+.secure_content_2 button:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.02);
+}
+footer {
+  background-color: #0d1b2a;
+}
+.footer_section {
+  padding: 20px 2%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.logo_content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.logo_content h4 {
+  color: white;
+}
+.copy_right p {
+  color: #ffffff;
+  font-size: 1rem;
+}
+.socal_midea a i {
+  color: #ffffff;
+}
+.socal_midea{
+    display: flex;
+    gap: 10px;
 }
